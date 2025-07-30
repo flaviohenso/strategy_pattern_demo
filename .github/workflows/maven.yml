@@ -42,5 +42,5 @@ jobs:
         run: mvn -B verify
 
       # Opcional: envia o grafo completo de dependências para o GitHub
-      - name: Update dependency graph
-        uses: advanced-security/maven-dependency-submission-action@v4
+      #- name: Update dependency graph
+       # uses: advanced-security/maven-dependency-submission-action@v4
