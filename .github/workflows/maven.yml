@@ -21,7 +21,6 @@ on:
 permissions:
   contents: read
   id-token: write
-  dependency-graph: write   # necessário para o passo “Update dependency graph”
 
 jobs:
   build:
