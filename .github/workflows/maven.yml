@@ -19,6 +19,7 @@ permissions:
   id-token: write
   actions: read
   security-events: write
+  dependencies: write
 
 jobs:
   build:
