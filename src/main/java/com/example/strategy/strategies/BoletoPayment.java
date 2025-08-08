@@ -16,7 +16,12 @@ public class BoletoPayment implements PaymentStrategy {
     }
 
     private String generateBoletoNumber() {
-        // Gera um identificador único para o boleto (mock)
-        return UUID.randomUUID().toString().replace("-", "").substring(0, 47);
+        // Gera um identificador único de 47 dígitos para o boleto (mock)
+        String base = UUID.randomUUID().toString().replace("-", "");
+        // Caso o UUID não seja suficiente para 47 caracteres, preenche com zeros.
+        if (base.length() < 47) {
+            return base + "0".repeat(47 - base.length());
+        }
+        return base.substring(0, 47);
     }
 } 
